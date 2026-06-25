@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck | เว็บไซต์ใหม่ คณะสังคมวิทยาและมานุษยวิทยา มหาวิทยาลัยธรรมศาสตร์</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Sarabun', system-ui, sans-serif;
+        }
+        
+        .slide {
+            min-height: 100vh;
+            scroll-snap-align: start;
+        }
+
+        .nav-dot {
+            transition: all 0.2s ease;
+        }
+        
+        .nav-dot.active {
+            background-color: #C9A04C;
+            transform: scale(1.3);
+        }
+
+        .pitch-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .pitch-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/95 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-[#C9A04C] rounded-xl flex items-center justify-center">
+                    <span class="text-[#6B1A2E] font-black text-2xl">S</span>
+                </div>
+                <div>
+                    <span class="font-bold text-lg">SocAnth TU</span>
+                    <span class="text-xs text-white/50 block -mt-1">Website Redesign 2026</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4 text-sm">
+                <button onclick="window.print()" class="flex items-center gap-2 px-5 py-2 bg-white/10 hover:bg-white/20 rounded-2xl text-sm font-medium transition-colors">
+                    <i class="fas fa-download"></i>
+                    <span>บันทึกเป็น PDF</span>
+                </button>
+                <button onclick="toggleFullScreen()" class="flex items-center gap-2 px-5 py-2 bg-[#C9A04C] text-[#6B1A2E] rounded-2xl text-sm font-bold hover:bg-amber-300 transition-colors">
+                    <i class="fas fa-expand"></i>
+                    <span>Present Mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SLIDE 1: COVER -->
+    <section id="slide-1" class="slide flex items-center justify-center bg-[#6B1A2E] relative">
+        <div class="max-w-5xl mx-auto px-6 text-center pt-16">
+            <div class="inline-flex items-center gap-2 bg-white/10 px-6 py-2 rounded-3xl mb-8">
+                <span class="text-[#C9A04C] text-sm font-medium">TCAS69 • รอบ 3</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-4">
+                เว็บไซต์ใหม่<br>
+                <span class="text-[#C9A04C]">ที่เข้าใจคน และเข้าใจสังคม</span>
+            </h1>
+            
+            <p class="text-2xl text-white/80 mt-6">คณะสังคมวิทยาและมานุษยวิทยา • มหาวิทยาลัยธรรมศาสตร์</p>
+            
+            <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-4">
+                <div class="bg-white/10 px-8 py-3 rounded-2xl text-sm">
+                    <span class="font-medium">นำเสนอโดย</span><br>
+                    <span class="text-[#C9A04C] font-bold">Rakphao Theppan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: ปัญหา -->
+    <section id="slide-2" class="slide bg-zinc-900 flex items-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-x-12 items-center">
+                <div class="md:col-span-5">
+                    <div class="text-[#C9A04C] text-sm font-bold tracking-widest mb-3">SLIDE 02</div>
+                    <h2 class="text-5xl font-bold leading-none">ปัญหาของเว็บไซต์ปัจจุบัน</h2>
+                </div>
+                <div class="md:col-span-7 mt-8 md:mt-0">
+                    <div class="space-y-6 text-lg">
+                        <div class="flex gap-4">
+                            <i class="fas fa-exclamation-circle text-red-400 mt-1.5"></i>
+                            <div>โครงสร้างเรียบง่ายเกินไป ขาดภาพประกอบและการเล่าเรื่องที่น่าสนใจ</div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-exclamation-circle text-red-400 mt-1.5"></i>
+                            <div>ไม่สอดคล้องกับแคมเปญ TCAS69 ล่าสุดที่คณะลงทุนทำอย่างหนัก</div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-exclamation-circle text-red-400 mt-1.5"></i>
+                            <div>ภาพลักษณ์ยังไม่ทันสมัยเทียบเท่าคณะสังคมศาสตร์ชั้นนำระดับโลก</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: วิไสทัศน์ -->
+    <section id="slide-3" class="slide bg-[#6B1A2E] flex items-center">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="text-[#C9A04C] text-sm tracking-[4px] mb-4">OUR VISION</div>
+            <h2 class="text-6xl md:text-7xl font-bold leading-none">เข้าใจคน<br>เข้าใจสังคม</h2>
+            <p class="mt-8 text-2xl text-white/80 max-w-2xl mx-auto">เว็บไซต์ใหม่จะเป็นประตูที่เปิดกว้างให้ผู้คนได้รู้จักคณะ ผ่านการออกแบบที่อบอุ่น ทันสมัย และมีเอกลักษณ์ชัดเจน</p>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: แนวทางการออกแบบ -->
+    <section id="slide-4" class="slide bg-zinc-900 flex items-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-[#C9A04C] text-sm font-bold tracking-widest mb-2">DESIGN DIRECTION</div>
+            <h2 class="text-5xl font-bold mb-10">แนวทางการออกแบบใหม่</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="pitch-card bg-zinc-950 border border-white/10 p-8 rounded-3xl">
+                    <div class="uppercase text-xs tracking-widest text-[#C9A04C] mb-4">INSPIRATION</div>
+                    <h3 class="text-3xl font-bold mb-4">ผสมผสาน 2 โลก</h3>
+                    <ul class="space-y-3 text-white/80">
+                        <li class="flex gap-3"><i class="fas fa-check text-[#C9A04C] mt-1"></i> <span>ความพรีเมียมแบบ Yale • Stanford • LSE</span></li>
+                        <li class="flex gap-3"><i class="fas fa-check text-[#C9A04C] mt-1"></i> <span>ความอบอุ่นและเป็นกันเองจากแคมเปญ TCAS69</span></li>
+                        <li class="flex gap-3"><i class="fas fa-check text-[#C9A04C] mt-1"></i> <span>เอกลักษณ์ไทย + มหาวิทยาลัยธรรมศาสตร์</span></li>
+                    </ul>
+                </div>
+                
+                <div class="pitch-card bg-zinc-950 border border-white/10 p-8 rounded-3xl">
+                    <div class="uppercase text-xs tracking-widest text-[#C9A04C] mb-4">KEY MESSAGE</div>
+                    <h3 class="text-3xl font-bold mb-4">“เข้าใจคน เข้าใจสังคม”</h3>
+                    <p class="text-white/70">ทุกองค์ประกอบบนเว็บไซต์จะสื่อสารถึงความเข้าใจในมนุษย์และสังคม ซึ่งเป็นหัวใจของคณะ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: Color Palette -->
+    <section id="slide-5" class="slide bg-white text-zinc-900 flex items-center">
+        <div class="max-w-6xl mx-auto px-6 w-full">
+            <div class="text-[#6B1A2E] text-sm font-bold tracking-widest mb-2">VISUAL IDENTITY</div>
+            <h2 class="text-5xl font-bold mb-10 text-[#6B1A2E]">ระบบสีและเอกลักษณ์ภาพ</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div>
+                    <div class="h-28 rounded-3xl bg-[#6B1A2E] mb-3"></div>
+                    <div class="font-bold">#6B1A2E</div>
+                    <div class="text-sm text-zinc-500">Deep Maroon (หลัก)</div>
+                </div>
+                <div>
+                    <div class="h-28 rounded-3xl bg-[#C9A04C] mb-3"></div>
+                    <div class="font-bold">#C9A04C</div>
+                    <div class="text-sm text-zinc-500">TU Gold (เน้น)</div>
+                </div>
+                <div>
+                    <div class="h-28 rounded-3xl bg-[#DB277C] mb-3"></div>
+                    <div class="font-bold">#DB277C</div>
+                    <div class="text-sm text-zinc-500">Pink (จากโฆษณา)</div>
+                </div>
+                <div>
+                    <div class="h-28 rounded-3xl bg-[#E2B45E] mb-3"></div>
+                    <div class="font-bold">#E2B45E</div>
+                    <div class="text-sm text-zinc-500">Beige Warm</div>
+                </div>
+                <div>
+                    <div class="h-28 rounded-3xl bg-[#F97316] mb-3"></div>
+                    <div class="font-bold">#F97316</div>
+                    <div class="text-sm text-zinc-500">Orange Accent</div>
+                </div>
+            </div>
+            
+            <p class="mt-8 text-zinc-600 max-w-md">สีเหล่านี้ถูกออกแบบมาเพื่อให้สอดคล้องกับ CI มหาวิทยาลัยธรรมศาสตร์ + แคมเปญ TCAS69 อย่างลงตัว</p>
+        </div>
+    </section>
+
+    <!-- SLIDE 6: โครงสร้าง -->
+    <section id="slide-6" class="slide bg-zinc-900 flex items-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-[#C9A04C] text-sm font-bold tracking-widest mb-3">INFORMATION ARCHITECTURE</div>
+            <h2 class="text-5xl font-bold mb-10">โครงสร้างเว็บไซต์ใหม่</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-zinc-950 p-7 rounded-3xl">
+                    <div class="font-bold text-xl mb-4 flex items-center gap-3"><i class="fas fa-home text-[#C9A04C]"></i> หน้าแรก (Hero)</div>
+                    <p class="text-sm text-white/70">ภาพพื้นหลังทรงพลัง + สโลแกน “เข้าใจคน เข้าใจสังคม” + ปุ่มสมัคร TCAS69 เด่น</p>
+                </div>
+                <div class="bg-zinc-950 p-7 rounded-3xl">
+                    <div class="font-bold text-xl mb-4 flex items-center gap-3"><i class="fas fa-book text-[#C9A04C]"></i> เรียนอะไร</div>
+                    <p class="text-sm text-white/70">3 กล่องสีสันตามโฆษณา TCAS69 (3 เน้นหลัก / ลงพื้นฐานจริง / ประเด็นสังคมร่วมสมัย)</p>
+                </div>
+                <div class="bg-zinc-950 p-7 rounded-3xl">
+                    <div class="font-bold text-xl mb-4 flex items-center gap-3"><i class="fas fa-briefcase text-[#C9A04C]"></i> จบแล้วทำอะไร</div>
+                    <p class="text-sm text-white/70">แสดงเส้นทางอาชีพชัดเจน 3 สาย (องค์กร / สื่อสาร / วิชาการ)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 7: ตัวอย่างการออกแบบ -->
+    <section id="slide-7" class="slide bg-white text-zinc-900 flex items-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-[#6B1A2E] text-sm font-bold tracking-widest mb-2">LIVE PROTOTYPE</div>
+            <h2 class="text-5xl font-bold mb-8 text-[#6B1A2E]">ตัวอย่างการออกแบบจริง</h2>
+            
+            <div class="bg-zinc-100 border border-zinc-200 rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <span class="font-bold">HTML Prototype ที่พร้อมใช้งานได้</span><br>
+                        <span class="text-sm text-zinc-500">ออกแบบตามแนวทางที่นำเสนอทั้งหมด</span>
+                    </div>
+                    <a href="https://socanth.tu.ac.th/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-[#6B1A2E] text-white rounded-2xl text-sm font-bold hover:bg-black transition-colors">
+                        ดูตัวอย่างเว็บไซต์ <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-white p-5 rounded-2xl border">Hero แรง + ปุ่ม TCAS69</div>
+                    <div class="bg-white p-5 rounded-2xl border">ส่วน “เรียนอะไร” 3 สีสัน</div>
+                    <div class="bg-white p-5 rounded-2xl border">ส่วน “มาร่วมกัน...” + ภาพสัญลักษณ์</div>
+                    <div class="bg-white p-5 rounded-2xl border">ส่วน “จบแล้วทำอะไร”</div>
+                    <div class="bg-white p-5 rounded-2xl border">Navigation ทันสมัย</div>
+                    <div class="bg-white p-5 rounded-2xl border">Responsive ทุกอุปกรณ์</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 8: กระบวนการทำงาน -->
+    <section id="slide-8" class="slide bg-zinc-900 flex items-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-10">กระบวนการทำงาน</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-[#C9A04C] text-[#6B1A2E] rounded-2xl flex items-center justify-center text-3xl font-black mb-4">1</div>
+                    <div class="font-bold">วิจัย &amp; วิเคราะห์</div>
+                    <div class="text-sm text-white/60 mt-1">CI คณะ + แคมเปญ TCAS + เว็บไซต์ชั้นนำ</div>
+                </div>
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-[#C9A04C] text-[#6B1A2E] rounded-2xl flex items-center justify-center text-3xl font-black mb-4">2</div>
+                    <div class="font-bold">ออกแบบแนวทาง</div>
+                    <div class="text-sm text-white/60 mt-1">Moodboard + Color + Structure</div>
+                </div>
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-[#C9A04C] text-[#6B1A2E] rounded-2xl flex items-center justify-center text-3xl font-black mb-4">3</div>
+                    <div class="font-bold">พัฒนา Prototype</div>
+                    <div class="text-sm text-white/60 mt-1">HTML + Tailwind (พร้อมใช้งาน)</div>
+                </div>
+                <div class="text-center">
+                    <div class="mx-auto w-16 h-16 bg-[#C9A04C] text-[#6B1A2E] rounded-2xl flex items-center justify-center text-3xl font-black mb-4">4</div>
+                    <div class="font-bold">ส่งมอบ &amp; ปรับแก้</div>
+                    <div class="text-sm text-white/60 mt-1">ตาม feedback จากคณะ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 9: ผลลัพธ์ -->
+    <section id="slide-9" class="slide bg-[#6B1A2E] flex items-center">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-12">ผลลัพธ์ที่คณะจะได้รับ</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-white/10 p-8 rounded-3xl">
+                    <i class="fas fa-globe text-4xl text-[#C9A04C] mb-6"></i>
+                    <div class="font-bold text-2xl">ภาพลักษณ์ทันสมัย</div>
+                    <p class="mt-3 text-white/70">เทียบเท่าคณะสังคมศาสตร์ชั้นนำระดับโลก</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-3xl">
+                    <i class="fas fa-user-graduate text-4xl text-[#C9A04C] mb-6"></i>
+                    <div class="font-bold text-2xl">ดึงดูดนักศึกษาใหม่</div>
+                    <p class="mt-3 text-white/70">โดยเฉพาะผ่านแคมเปญ TCAS69</p>
+                </div>
+                <div class="bg-white/10 p-8 rounded-3xl">
+                    <i class="fas fa-chart-line text-4xl text-[#C9A04C] mb-6"></i>
+                    <div class="font-bold text-2xl">เพิ่ม Engagement</div>
+                    <p class="mt-3 text-white/70">เนื้อหาที่น่าสนใจ + การนำทางที่ชัดเจน</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 10: ขั้นตอนต่อไป -->
+    <section id="slide-10" class="slide bg-zinc-950 flex items-center">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-4">ขั้นตอนต่อไป</h2>
+            <p class="text-xl text-white/70 mb-10">พร้อมเริ่มต้นเมื่อไร่ก็ได้ตามที่คณะสะดวก</p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button onclick="alert('ขอบคุณครับ! ผมจะส่งไฟล์และรายละเอียดเพิ่มเติมให้ทางอีเมล')" class="px-10 py-4 bg-[#C9A04C] text-[#6B1A2E] font-bold rounded-3xl text-lg hover:bg-amber-300 transition-all">
+                    อนุมัติแนวทางการออกแบบ
+                </button>
+                <button onclick="alert('ผมจะติดต่อกลับเพื่อนัดประชุมเพื่อนำเสนอแบบละเอียด')" class="px-10 py-4 border border-white/30 hover:bg-white/10 font-medium rounded-3xl text-lg transition-all">
+                    นัดประชุมเพื่อหารือรายละเอียด
+                </button>
+            </div>
+            
+            <div class="mt-16 text-sm text-white/50">
+                Rakphao Theppan • Web Developer &amp; Designer<br>
+                theppan@gmail.com • Chiang Mai, Thailand
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 10;
+        
+        function updateNavDots() {
+            const container = document.getElementById('nav-dots');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            for (let i = 1; i <= totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.className = `nav-dot w-2.5 h-2.5 rounded-full ${i === currentSlide ? 'bg-[#C9A04C] scale-125' : 'bg-white/30'}`;
+                dot.onclick = () => goToSlide(i);
+                container.appendChild(dot);
+            }
+        }
+        
+        function goToSlide(slideNumber) {
+            const slide = document.getElementById(`slide-${slideNumber}`);
+            if (slide) {
+                slide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                currentSlide = slideNumber;
+                updateNavDots();
+            }
+        }
+        
+        function nextSlide() {
+            if (currentSlide < totalSlides) goToSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            if (currentSlide > 1) goToSlide(currentSlide - 1);
+        }
+        
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(() => {});
+            } else {
+                document.exitFullscreen();
+            }
+        }
+        
+        function init() {
+            const navContainer = document.createElement('div');
+            navContainer.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden md:flex items-center gap-2 bg-zinc-900/90 backdrop-blur-xl border border-white/10 px-2 py-2 rounded-3xl';
+            navContainer.innerHTML = `
+                <button onclick="prevSlide()" class="w-10 h-10 flex items-center justify-center hover:bg-white/10 rounded-2xl"><i class="fas fa-chevron-left"></i></button>
+                <div class="flex items-center gap-1.5 px-3" id="nav-dots"></div>
+                <button onclick="nextSlide()" class="w-10 h-10 flex items-center justify-center hover:bg-white/10 rounded-2xl"><i class="fas fa-chevron-right"></i></button>
+            `;
+            document.body.appendChild(navContainer);
+            
+            updateNavDots();
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+                else if (e.key === 'ArrowLeft') { prevSlide(); }
+                else if (e.key.toLowerCase() === 'f') { toggleFullScreen(); }
+            });
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        currentSlide = parseInt(entry.target.id.split('-')[1]);
+                        updateNavDots();
+                    }
+                });
+            }, { threshold: 0.6 });
+            
+            document.querySelectorAll('.slide').forEach(slide => observer.observe(slide));
+            
+            console.log('%c[Pitch Deck] HTML Pitch Deck โหลดเรียบร้อยแล้ว', 'color:#C9A04C');
+        }
+        
+        window.onload = init;
+    </script>
+</body>
+</html>
