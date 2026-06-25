@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คณะสังคมวิทยาและมานุษยวิทยา | มหาวิทยาลัยธรรมศาสตร์</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Sarabun', system-ui, sans-serif; }
+        .hero-bg { background-image: linear-gradient(rgba(107, 26, 46, 0.75), rgba(107, 26, 46, 0.85)), url('https://picsum.photos/id/1015/2000/1200'); background-size: cover; }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+
+<header class="sticky top-0 z-50 bg-[#6B1A2E] text-white shadow-lg">
+    <div class="max-w-7xl mx-auto">
+        <div class="bg-[#9C2234] py-2 text-xs">
+            <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                <div class="flex items-center gap-4 text-sm">
+                    <img src="https://tu.ac.th/wp-content/uploads/2023/06/tu-logo-white.png" alt="TU" class="h-6">
+                    <span class="font-medium">มหาวิทยาลัยธรรมศาสตร์</span>
+                </div>
+                <div class="flex items-center gap-6 text-sm">
+                    <button onclick="toggleLang()" class="font-medium hover:text-amber-300">EN</button>
+                    <a href="#" class="hover:text-amber-300">ติดต่อเรา</a>
+                    <button class="bg-amber-400 text-[#6B1A2E] px-5 py-1 rounded-full font-bold text-xs hover:bg-white">TCAS69 รอบ 3 • สมัครเลย</button>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="text-3xl font-bold">สังคมวิทยา &amp; มานุษยวิทยา</div>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#" class="hover:text-amber-400">เกี่ยวกับ</a>
+                <a href="#" class="hover:text-amber-400">หลักสูตร์</a>
+                <a href="#" class="bg-amber-400 text-[#6B1A2E] px-6 py-2 rounded-full font-bold">รับสมัคร TCAS69</a>
+                <a href="#" class="hover:text-amber-400">บุคลากร</a>
+                <a href="#" class="hover:text-amber-400">ข่าวสาร</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="px-5 py-2 border border-white rounded-full hover:bg-white hover:text-[#6B1A2E]">ค้นหา</button>
+                <button onclick="alert('สมัครเรียนสำเร็จ! (Prototype)')" class="bg-amber-400 hover:bg-amber-300 text-[#6B1A2E] font-bold px-6 py-3 rounded-full">สมัครเรียนวันนี้ →</button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-bg h-screen flex items-center text-white relative">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+        <h1 class="text-6xl md:text-7xl font-bold leading-none mb-4">เข้าใจคน</h1>
+        <h1 class="text-6xl md:text-7xl font-bold leading-none text-amber-300">เข้าใจสังคม</h1>
+        <p class="mt-6 text-2xl font-light">คณะสังคมวิทยาและมานุษยวิทยา • มหาวิทยาลัยธรรมศาสตร์</p>
+        
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+            <button onclick="alert('ไปหน้าสมัคร TCAS69!')" class="bg-amber-400 hover:bg-white hover:text-[#6B1A2E] text-[#6B1A2E] font-bold text-xl px-10 py-4 rounded-2xl flex items-center gap-3 shadow-xl">
+                <i class="fas fa-user-plus"></i> สมัคร TCAS69 ตอนนี้
+            </button>
+            <button class="border-2 border-white hover:bg-white hover:text-[#6B1A2E] font-medium text-xl px-8 py-4 rounded-2xl">สำรวจหลักสูตร์</button>
+        </div>
+    </div>
+</section>
+
+<!-- เรียนอะไร -->
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-[#6B1A2E]">คุณจะเรียนอะไร</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-[#DB277C] text-white p-6 rounded-3xl">
+                <div class="bg-white/20 text-center py-3 text-xl font-bold rounded-2xl">3 เน้นหลัก</div>
+                <p class="mt-6 text-sm leading-relaxed">เข้าใจมานุษยวิทยาและสังคมผ่าน 3 เน้นหลัก</p>
+            </div>
+            <div class="bg-[#E2B45E] text-[#6B1A2E] p-6 rounded-3xl">
+                <div class="bg-white/30 text-center py-3 text-xl font-bold rounded-2xl">ลงพื้นฐานจริง</div>
+                <p class="mt-6 text-sm leading-relaxed">เรียนรู้จากผู้คนและประสบการณ์จริง พิพิธภัณฑ์ ห้องปฏิบัติการ</p>
+            </div>
+            <div class="bg-[#F97316] text-white p-6 rounded-3xl">
+                <div class="bg-white/20 text-center py-3 text-xl font-bold rounded-2xl">ประเด็นสังคมร่วมสมัย</div>
+                <p class="mt-6 text-sm leading-relaxed">เควียร์ เพศภาวะ • วัฒนธรรมดิจิทัล • สิ่งแวดล้อม • การเคลื่อนไหวทางสังคม</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quote -->
+<section class="bg-[#6B1A2E] text-white py-20">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-5xl font-bold leading-tight">“เข้าใจคน เข้าใจสังคม”</h2>
+            <p class="mt-6 text-xl">คณะสังคมวิทยาและมานุษยวิทยา มหาวิทยาลัยธรรมศาสตร์</p>
+        </div>
+        <img src="https://picsum.photos/id/201/600/400" alt="หน้ากากโบราณ" class="rounded-3xl shadow-2xl mx-auto w-96 border-8 border-white/30">
+    </div>
+</section>
+
+<!-- มาร่วมกัน -->
+<section class="py-16 bg-zinc-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-center text-4xl font-bold text-[#6B1A2E] mb-8">มาร่วมกัน ...</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="https://picsum.photos/id/201/300/300" alt="" class="rounded-3xl shadow">
+            <img src="https://picsum.photos/id/64/300/300" alt="" class="rounded-3xl shadow">
+            <img src="https://picsum.photos/id/201/300/300" alt="" class="rounded-3xl shadow">
+            <img src="https://picsum.photos/id/201/300/300" alt="" class="rounded-3xl shadow">
+        </div>
+    </div>
+</section>
+
+<!-- จบแล้วทำอะไร -->
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-[#6B1A2E]">จบแล้วทำอะไร</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="border-2 border-[#DB277C] p-6 rounded-3xl text-center">
+                <h3 class="text-xl font-bold text-[#DB277C]">สายองค์กร • NGO • CSR</h3>
+                <p class="mt-3 text-sm">นักทรัพยากรณ์บุคคล • เจ้าหน้าที่โครงการ • นักวิเคราะห์นโยบาย</p>
+            </div>
+            <div class="border-2 border-[#E2B45E] p-6 rounded-3xl text-center">
+                <h3 class="text-xl font-bold text-[#E2B45E]">สายสื่อสารข้อมูล • PR</h3>
+                <p class="mt-3 text-sm">นักวิจัยตลาด • Content Creator • คอลัมนิสต์ • PR Officer</p>
+            </div>
+            <div class="border-2 border-[#F97316] p-6 rounded-3xl text-center">
+                <h3 class="text-xl font-bold text-[#F97316]">สายวิชาการ</h3>
+                <p class="mt-3 text-sm">นักวิชาการ • นักพัฒนา • นักวิจัย • งานวิชาการ</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-[#6B1A2E] text-white py-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold">พร้อมที่จะเข้าใจคน และเข้าใจสังคมแล้วหรือยัง?</h3>
+        <button onclick="alert('ยินดีต้อนรับสู่ TCAS69 SocAnth TU!')" class="mt-8 bg-white text-[#6B1A2E] font-bold text-2xl px-12 py-5 rounded-3xl">
+            สมัครเรียน TCAS69 รอบ 3 • เปิดรับอยู่ตอนนี้
+        </button>
+    </div>
+</footer>
+
+<script>
+    function toggleLang() { alert('สลับเป็นภาษาอังกฤษ (Prototype)'); }
+    console.log('%c[Prototype] SocAnth TU Website Prototype โหลดสำเร็จ', 'color:#C9A04C');
+</script>
+</body>
+</html>
